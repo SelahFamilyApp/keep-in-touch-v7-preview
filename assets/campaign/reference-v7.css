@@ -1,0 +1,330 @@
+/* V7 fidelity layer - additive to V6; no replacement of source artwork or shop photos.
+   Desktop edge fragments are derived solely from the four approved PNGs. */
+html[data-reference-exact]{
+ --v7-banner:#35211f; --v7-highlight:#6f3d3d;
+ --v7-edge:none; --v7-card:#f8f2eb;
+}
+html[data-reference-exact="winter"]{--v7-banner:#30201f;--v7-highlight:#653943;--v7-card:#f8f3ef}
+html[data-reference-exact="valentine"]{--v7-banner:#551925;--v7-highlight:#852b44;--v7-card:#fbf3f2}
+html[data-reference-exact="ramadan"]{--v7-banner:#073f35;--v7-highlight:#9a733c;--v7-card:#f8f3e9}
+html[data-reference-exact="sham-nessim"]{--v7-banner:#4a593a;--v7-highlight:#657b3a;--v7-card:#fbf6ee}
+html[data-reference-exact] body{
+ position:relative;isolation:isolate;
+ background:var(--v7-card)!important;
+}
+@media(min-width:1060px){
+ html[data-reference-exact] body::before{
+  content:"";position:absolute;inset:0 0 auto;z-index:0;
+  width:100%;height:auto;aspect-ratio:1448/1048;
+  background:var(--v7-edge) center top / 100% 100% no-repeat;
+  pointer-events:none;
+ }
+ html[data-reference-exact] main,
+ html[data-reference-exact] .announcement,
+ html[data-reference-exact] .site-header,
+ html[data-reference-exact] .season-console{position:relative;z-index:1}
+ html[data-reference-exact] .nav-shell.container,
+ html[data-reference-exact] .season-console-inner.container{
+  width:calc(100% - 150px);max-width:1300px;
+ }
+ html[data-reference-exact] .products-section{
+  background:transparent!important;padding-top:12px!important;
+ }
+ html[data-reference-exact] .products-section .product-header{
+  margin-bottom:15px!important;
+ }
+ html[data-reference-exact] main>.real-categories{
+  background:transparent!important;
+ }
+ html[data-reference-exact] .campaign-benefits{background:#f7f1e9c9}
+}
+html[data-reference-exact] .announcement{
+ background:var(--v7-banner)!important;
+ color:#f9ebde;font-size:12px;letter-spacing:.045em;
+}
+html[data-reference-exact] .announcement>span:not(.announcement-demo){
+ color:#d9bea0;
+}
+html[data-reference-exact] .announcement-demo{
+ color:#fbf3e6;border-color:#f2e2ca70;
+ font-size:10px;padding-inline:10px;
+}
+html[data-reference-exact] .site-header{
+ background:linear-gradient(110deg,#f8f4f0 0%,#fffdfb 65%,#f6f1eb 100%)!important;
+ box-shadow:0 3px 12px #5641320b;
+}
+html[data-reference-exact] .main-nav{
+ gap:clamp(21px,3.1vw,47px);
+}
+html[data-reference-exact] .main-nav a{
+ color:#342e2b;font-size:14px;font-weight:700;
+}
+html[data-reference-exact] .main-nav a.nav-active{
+ color:var(--v7-highlight)!important;
+}
+html[data-reference-exact] .main-nav a.nav-active::after{
+ width:17px;height:2px;background:var(--v7-highlight);
+}
+html[data-reference-exact] .brand-seal{width:54px;height:54px;font-size:31px}
+html[data-reference-exact] .brand-type b{font-size:19px;letter-spacing:.12em}
+html[data-reference-exact] .brand-type small{font-size:8px;letter-spacing:.4em}
+html[data-reference-exact] .season-console{
+ background:linear-gradient(100deg,#f8f4f1,#fffcfa 72%,#f9f4f1)!important;
+ border-bottom:1px solid #cfc1b6;
+}
+html[data-reference-exact] .season-console-inner{
+ gap:12px!important;
+}
+html[data-reference-exact] .season-console-intro{
+ flex-basis:200px;gap:12px;
+}
+html[data-reference-exact] .season-console-symbol{
+ width:49px;height:49px;border-color:#aaa09b;
+ color:var(--v7-highlight);font-size:29px;
+}
+html[data-reference-exact] .season-console-kicker{
+ color:#694942;font-size:8px;letter-spacing:.1em;
+}
+html[data-reference-exact] .season-console-intro strong{
+ color:#332522;font-size:13px;font-weight:750;
+}
+html[data-reference-exact] .season-console-options{
+ display:flex!important;align-items:center;
+ justify-content:space-between;gap:9px!important;
+ overflow-x:auto;scrollbar-width:none;
+}
+html[data-reference-exact] .season-console-options::-webkit-scrollbar{display:none}
+/* Preserve all 22 quick-radio controls in a horizontally scrollable strip.
+   Only the first five fit the desktop viewport; the others remain interactive. */
+html[data-reference-exact] #seasonQuickChoices>.season-chip:nth-of-type(n+6){
+ display:inline-flex!important;
+}
+html[data-reference-exact] .season-chip{
+ flex:1 0 0;max-width:181px;min-width:112px;
+ min-height:43px!important;padding:6px 10px!important;
+ border-radius:8px!important;
+ border:1px solid #d9cec6!important;
+ display:inline-flex;gap:8px;align-items:center;justify-content:center;
+ box-shadow:0 1px 3px #35291e10!important;
+ background:#faf7f3!important;color:#3e3430!important;
+ position:relative;
+}
+html[data-reference-exact] .season-chip:hover{
+ border-color:#94766f!important;background:#fff!important;
+}
+html[data-reference-exact] .season-chip:focus-within{
+ outline:2px solid var(--v7-highlight);outline-offset:2px;
+}
+html[data-reference-exact] .season-chip input[type="radio"]{
+ position:absolute;opacity:0;width:1px;height:1px;
+ margin:0;padding:0;pointer-events:none;
+}
+html[data-reference-exact] .season-chip .season-chip-symbol{
+ order:0;font-size:23px;line-height:1;color:var(--chip-color);
+}
+html[data-reference-exact] .season-chip .season-chip-text{
+ order:1;font-size:12px;font-weight:750;
+}
+html[data-reference-exact] .season-chip.selected{
+ border-color:#796c67!important;
+ background:#4a5460!important;
+ box-shadow:0 2px 5px #2f322b2e!important;
+ color:white!important;
+}
+html[data-reference-exact="valentine"] .season-chip.selected{background:#852e43!important}
+html[data-reference-exact="ramadan"] .season-chip.selected{background:#174e3a!important}
+html[data-reference-exact="sham-nessim"] .season-chip.selected{background:#718a52!important}
+html[data-reference-exact] .season-chip.selected .season-chip-symbol{
+ color:#fff!important;
+}
+html[data-reference-exact] .season-console-actions{
+ align-items:start;gap:3px;min-width:93px;
+}
+html[data-reference-exact] .season-console-more{
+ font-size:12px;border:0;font-weight:800;
+ text-decoration:underline;text-underline-offset:3px;
+}
+html[data-reference-exact] .season-console-more span{
+ font-size:14px;
+}
+html[data-reference-exact] .staff-console-link{
+ font-size:9px;opacity:.63;
+}
+html[data-reference-exact] .real-categories .section-header h2{
+ font-weight:750;font-size:24px!important;letter-spacing:-.02em;
+}
+html[data-reference-exact] .real-categories .section-header h2:before,
+html[data-reference-exact] .real-categories .section-header h2:after{
+ color:var(--v7-highlight)!important;opacity:.75;
+ border-inline:1px solid #b3a39c;
+ padding-inline:13px;margin-inline:9px!important;
+}
+html[data-reference-exact] .photo-category-tile img{
+ will-change:auto;
+}
+html[data-reference-exact] .products-section .product-header{
+ border-color:#b8a6a0;
+}
+html[data-reference-exact] .products-section .product-header h2{
+ color:var(--v7-highlight)!important;font-weight:750;
+}
+html[data-reference-exact] .campaign-editorial{
+ height:215px!important;
+ min-height:0!important;
+}
+html[data-reference-exact] .campaign-editorial .reference-editorial-image{
+ height:100%;width:100%;object-fit:contain;
+}
+html[data-reference-exact] .product-grid{gap:15px!important}
+html[data-reference-exact] .product-card{
+ background:#fffaf6!important;
+ border:1px solid #dfd0c8!important;
+ border-radius:10px!important;
+ box-shadow:0 5px 14px #5a403a0c!important;
+ overflow:hidden;
+}
+html[data-reference-exact] .product-card:hover{
+ box-shadow:0 8px 22px #57372d22!important;
+}
+html[data-reference-exact] .product-card.review-only .product-image-wrap{
+ position:relative;isolation:isolate;
+ background:#e5d6cb!important;
+ aspect-ratio:226/150!important;
+}
+html[data-reference-exact] .product-card.review-only .product-image-wrap::before{
+ content:"";position:absolute;inset:-14px;z-index:0;
+ background-image:var(--v7-product-photo);
+ background-position:center;background-size:cover;
+ filter:blur(13px) saturate(.82) brightness(1.09);
+ opacity:.93;transform:scale(1.12);
+ pointer-events:none;
+}
+html[data-reference-exact] .product-card.review-only .product-image-wrap::after{
+ content:"";position:absolute;inset:0;z-index:0;
+ background:linear-gradient(110deg,#2b221b1b,#fff4e01d,#2b221b1b);
+ pointer-events:none;
+}
+html[data-reference-exact] .product-card.review-only .product-image-wrap>img{
+ position:relative;z-index:1;
+ width:100%;height:100%;
+ padding:2px 5px!important;
+ object-fit:contain!important;
+ background:transparent!important;
+ filter:drop-shadow(0 5px 10px #20181236);
+ transition:transform .28s ease;
+}
+html[data-reference-exact] .product-card.review-only:hover .product-image-wrap>img{
+ transform:scale(1.035);
+}
+html[data-reference-exact] .product-card .product-tag{
+ z-index:3;background:#fff9efcf;
+ border:1px solid #eadbc4bd;color:#564a3f;
+ font-size:9px!important;letter-spacing:0;
+}
+html[data-reference-exact] .product-card .favorite-btn{
+ z-index:3;background:#fff8efde;border:1px solid #ffffffc7;
+ color:#785d5b;font-size:21px;
+}
+html[data-reference-exact] .product-card .product-meta{
+ padding:7px 10px 7px;min-height:54px;
+}
+html[data-reference-exact] .product-card .product-name{
+ color:#362925;font-size:12px!important;font-weight:750;
+ line-height:1.35;
+}
+html[data-reference-exact] .product-card .product-price{
+ color:#815348;font-size:11px!important;
+ line-height:1.4;white-space:normal;
+ text-align:center!important;font-weight:700;
+}
+html[data-reference-exact] .campaign-benefits{
+ border:1px solid #d6c4b6;border-radius:11px;
+ box-shadow:0 3px 15px #5f403116;
+ padding:12px 7px!important;
+}
+html[data-reference-exact] .campaign-benefits>div{
+ gap:13px!important;border-inline-end:1px solid #cfbfb4;
+}
+html[data-reference-exact] .campaign-benefits>div:last-child{
+ border-inline-end:0;
+}
+html[data-reference-exact] .campaign-benefits>div>span{
+ font-size:25px;min-width:29px;text-align:center;
+ color:var(--v7-highlight);
+ line-height:1;
+}
+html[data-reference-exact] .campaign-benefits p{
+ margin:0;font-size:12px;line-height:1.4;font-weight:750;
+}
+html[data-reference-exact] .campaign-benefits small{
+ display:block;margin-top:4px;color:#766e6b;
+ font-size:10px;line-height:1.3;font-weight:500;
+}
+@media(max-width:1059px){
+ html[data-reference-exact] .season-console-options{justify-content:start}
+ html[data-reference-exact] .season-chip{
+  flex:0 0 142px;min-width:125px;min-height:40px!important;
+ }
+ html[data-reference-exact] .season-console-intro{flex-basis:auto}
+ html[data-reference-exact] .season-console-symbol{
+  width:36px;height:36px;font-size:22px;
+ }
+ html[data-reference-exact] .season-console-intro strong{font-size:12px}
+ html[data-reference-exact] .campaign-editorial{height:215px!important}
+ html[data-reference-exact] .product-card.review-only .product-image-wrap{aspect-ratio:226/166!important}
+}
+@media(max-width:780px){
+ html[data-reference-exact] .season-console-inner.container{
+  width:calc(100% - 28px);max-width:none;gap:10px!important;
+ }
+ html[data-reference-exact] .season-console-options{
+  padding-bottom:4px!important;
+ }
+ html[data-reference-exact] .season-console-actions{min-width:0}
+ html[data-reference-exact] .season-chip{
+  flex:0 0 136px;
+ }
+ html[data-reference-exact] .products-section{padding-top:0!important}
+ html[data-reference-exact] .products-section .product-header{margin-bottom:10px!important}
+ html[data-reference-exact] .product-card .product-meta{min-height:62px}
+ html[data-reference-exact] .product-card .product-name{
+  white-space:normal;display:-webkit-box;
+  -webkit-line-clamp:2;-webkit-box-orient:vertical;
+  overflow:hidden;
+ }
+ html[data-reference-exact] .product-card .product-price{font-size:10.5px!important}
+ html[data-reference-exact] .campaign-benefits{margin-block:16px 22px!important}
+ html[data-reference-exact] .campaign-benefits>div{
+  padding:9px 5px;gap:8px!important;
+ }
+}
+@media(max-width:480px){
+ html[data-reference-exact] .announcement{font-size:10px;gap:7px}
+ html[data-reference-exact] .announcement-demo{font-size:8px}
+ html[data-reference-exact] .season-console-intro strong{font-size:11px}
+ html[data-reference-exact] .season-console-kicker{font-size:7px}
+ html[data-reference-exact] .season-chip{
+  flex:0 0 132px;min-width:132px;
+  padding:5px!important;
+ }
+ html[data-reference-exact] .season-chip .season-chip-text{font-size:11px}
+ html[data-reference-exact] .season-chip .season-chip-symbol{font-size:19px}
+ html[data-reference-exact] .product-grid{gap:10px!important}
+ html[data-reference-exact] .product-card.review-only .product-image-wrap{
+  aspect-ratio:1/0.86!important;
+ }
+ html[data-reference-exact] .product-card .product-meta{padding:7px 6px}
+ html[data-reference-exact] .product-card .product-tag{
+  font-size:8px!important;padding:1px 3px;
+ }
+ html[data-reference-exact] .product-card .favorite-btn{
+  width:27px;height:27px;left:5px;top:5px;
+ }
+ html[data-reference-exact] .campaign-benefits p{font-size:11px}
+ html[data-reference-exact] .campaign-benefits small{font-size:9px}
+}
+@media(prefers-reduced-motion:reduce){
+ html[data-reference-exact] .product-card.review-only .product-image-wrap>img{
+  transition:none!important;
+ }
+}

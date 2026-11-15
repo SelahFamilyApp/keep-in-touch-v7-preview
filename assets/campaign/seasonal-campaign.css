@@ -1,0 +1,481 @@
+
+/* KEEP IN TOUCH — Signature Seasonal Atelier
+   Four premium campaigns visually adapted from approved reference screenshots.
+   Cinematic campaign images are cropped from approved mockups, never product photos.
+   Real product thumbnails remain unchanged and unpurchasable until verified. */
+@font-face{font-family:KITSans;src:local("Cairo");font-display:swap}
+html[data-campaign]{
+ --campaign-background:#fcf8f5;
+ --campaign-surface:#efe7df;
+ --campaign-tint:#f5ede6;
+ --campaign-ink:#44322d;
+ --campaign-button:#5e3436;
+ --campaign-metal:#b99d76;
+ --campaign-line:#d5c4b8;
+ --campaign-ornament:"✧";
+ --campaign-cover:#e8ddd6;
+ scroll-padding-top:88px;
+}
+html[data-campaign="winter"]{
+ --campaign-background:#f7f3f1;--campaign-surface:#eeeceb;--campaign-tint:#e1e3e4;
+ --campaign-ink:#49352f;--campaign-button:#49332f;--campaign-metal:#b6a291;
+ --campaign-line:#d7cfc7;--campaign-ornament:"❄";--campaign-cover:#e2e4e4;
+ --accent:#987e80;--accent-deep:#745d63;--dark:#413b40;--paper:#f8f5f2;
+}
+html[data-campaign="valentine"]{
+ --campaign-background:#fdf6f3;--campaign-surface:#f7e9e6;--campaign-tint:#efd8d8;
+ --campaign-ink:#692c37;--campaign-button:#7c2439;--campaign-metal:#bc8c89;
+ --campaign-line:#e8c9c6;--campaign-ornament:"♡";--campaign-cover:#f6e2e0;
+ --accent:#a15c6b;--accent-deep:#762a40;--dark:#671f35;--paper:#fff9f6;
+}
+html[data-campaign="ramadan"]{
+ --campaign-background:#f9f4ea;--campaign-surface:#f5ebd9;--campaign-tint:#f3e6cc;
+ --campaign-ink:#f4e6c7;--campaign-button:#154f45;--campaign-metal:#c69b59;
+ --campaign-line:#d2b986;--campaign-ornament:"☪";--campaign-cover:#103e37;
+ --accent:#be9b5f;--accent-deep:#8c6b3f;--dark:#153f37;--paper:#faf7f0;
+}
+html[data-campaign="sham-el-nessim"]{
+ --campaign-background:#faf9f0;--campaign-surface:#f6f3e2;--campaign-tint:#e7edda;
+ --campaign-ink:#496138;--campaign-button:#617443;--campaign-metal:#c7ae75;
+ --campaign-line:#d7dfc2;--campaign-ornament:"✿";--campaign-cover:#ecf0db;
+ --accent:#8c9d69;--accent-deep:#5f7549;--dark:#5b6b3e;--paper:#fdfcf7;
+}
+html[data-campaign] body{background:var(--campaign-background);}
+html[data-campaign] .announcement-bar,
+html[data-campaign] .top-bar{
+ background:var(--campaign-button)!important;
+}
+html[data-campaign="ramadan"] .announcement-bar,
+html[data-campaign="ramadan"] .top-bar{
+ background:#082e2d!important;
+ color:#f2dcac;
+}
+html[data-campaign] header,
+html[data-campaign] .site-header{
+ background:rgba(255,252,249,.985)!important;
+}
+html[data-campaign] .season-bar,
+html[data-campaign] .season-picker,
+html[data-campaign] .season-switcher{
+ background:var(--campaign-background);
+ border-color:var(--campaign-line);
+}
+html[data-campaign] .season-chip.selected{
+ background:var(--campaign-button)!important;
+ border-color:var(--campaign-button)!important;
+ color:#fff9ec!important;
+ box-shadow:0 5px 15px rgba(42,29,22,.12);
+}
+/* The signature hero transforms layout, typographic scale, decorations,
+   image treatment and background — this is NOT merely a color change. */
+html[data-campaign] .research-banner,
+html[data-campaign] .mobile-real-photo-proof{display:none!important}
+html[data-campaign] main{display:flex;flex-direction:column;min-width:0}
+html[data-campaign] main>.hero{order:0}
+html[data-campaign] main>.categories{order:1}
+html[data-campaign] main>.products-section{order:2}
+html[data-campaign] main>.campaign-benefits{order:3}
+html[data-campaign] main>.photo-gallery-section{order:4}
+html[data-campaign] main>.value-strip{display:none!important}
+html[data-campaign] main>:not(.hero):not(.categories):not(.products-section):not(.campaign-benefits):not(.photo-gallery-section):not(.value-strip){order:5}
+.campaign-hero-scene,.campaign-heading,.campaign-subheading,.campaign-visual-note,.campaign-divider,.campaign-benefits,.campaign-editorial,
+.campaign-season-credit{display:none}
+html[data-campaign] .hero.hero-campaign{
+ width:100%;max-width:none;margin:0;padding:0!important;
+ min-height:0;height:clamp(350px,27.8vw,420px);
+ display:grid;grid-template-columns:minmax(340px,36%) minmax(0,64%);
+ gap:0;align-items:stretch;
+ background:var(--campaign-surface);
+ overflow:hidden;position:relative;
+}
+html[data-campaign] .hero.hero-campaign .hero-visual{
+ position:relative;max-width:none;width:100%;height:100%;margin:0;min-height:0;
+ direction:ltr;overflow:hidden;order:initial;
+ background:var(--campaign-cover)
+}
+html[data-campaign] .hero.hero-campaign .hero-visual .hero-arch,
+html[data-campaign] .hero.hero-campaign .hero-visual .hero-season-medallion,
+html[data-campaign] .hero.hero-campaign .hero-visual .hero-floating-card,
+html[data-campaign] .hero.hero-campaign .hero-visual .round-stamp,
+html[data-campaign] .hero.hero-campaign .hero-visual .hero-side-notation{
+ display:none!important
+}
+html[data-campaign] .campaign-hero-scene{
+ display:block;position:absolute;inset:0;overflow:hidden;isolation:isolate
+}
+html[data-campaign] .campaign-hero-scene img{
+ width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;
+ animation:kit-campaign-appear .42s ease-out both;
+ filter:saturate(1.02);
+}
+html[data-campaign] .campaign-hero-scene::after{
+ content:"";pointer-events:none;position:absolute;inset:0 0 0 auto;width:10%;
+ background:linear-gradient(90deg,transparent,var(--campaign-surface));
+ opacity:.6
+}
+html[data-campaign] .hero.hero-campaign .hero-copy{
+ width:100%;height:100%;padding:26px clamp(24px,4vw,75px) 25px 12px;
+ display:flex;flex-direction:column;justify-content:center;gap:0;
+ position:relative;z-index:1;background:var(--campaign-surface);
+ color:var(--campaign-ink);
+}
+html[data-campaign="ramadan"] .hero.hero-campaign .hero-copy{
+ background:radial-gradient(ellipse at 30% 20%,#144d43 0%,#092f2d 64%,#052d2a 100%);
+ color:#f2e5c8;
+}
+html[data-campaign="winter"] .hero.hero-campaign .hero-copy{
+ background:linear-gradient(105deg,#e4e4e5 0%,#ece7e5 55%,#f3eeec 100%)
+}
+html[data-campaign="valentine"] .hero.hero-campaign .hero-copy{
+ background:linear-gradient(105deg,#f4dedc,#f8eeeb 85%)
+}
+html[data-campaign="sham-el-nessim"] .hero.hero-campaign .hero-copy{
+ background:linear-gradient(105deg,#f3f3e7,#fbf8ef 90%)
+}
+html[data-campaign] .hero.hero-campaign .hero-copy>.eyebrow{
+ font-size:10px;letter-spacing:.18em;
+ margin:0 0 14px;color:var(--campaign-ink);
+ white-space:nowrap;opacity:.83;
+}
+html[data-campaign] .hero.hero-campaign .hero-copy>.eyebrow .eyebrow-line{background:var(--campaign-metal)}
+html[data-campaign] .hero.hero-campaign .hero-copy>h1#heroTitle,
+html[data-campaign] .hero.hero-campaign .hero-copy>p#heroDescription,
+html[data-campaign] .hero.hero-campaign .hero-bottom{display:none!important}
+html[data-campaign] .campaign-heading{
+ display:block;font-family:var(--font-ar),system-ui,sans-serif;
+ font-size:clamp(42px,4.65vw,70px);font-weight:850;
+ line-height:1.3;letter-spacing:-.035em;
+ max-width:520px;margin:0;
+ color:var(--campaign-ink)
+}
+html[data-campaign] .campaign-heading span{display:block;color:var(--campaign-ink)}
+html[data-campaign="valentine"] .campaign-heading span:last-child{color:#933649}
+html[data-campaign="winter"] .campaign-heading span:last-child{color:#715251}
+html[data-campaign="sham-el-nessim"] .campaign-heading span:last-child{color:#879553}
+html[data-campaign="ramadan"] .campaign-heading span:last-child{color:#dfc68a}
+html[data-campaign] .campaign-divider{
+ display:flex;align-items:center;gap:13px;margin:8px 0 14px;width:min(265px,80%);
+ color:var(--campaign-metal);font-size:19px
+}
+html[data-campaign] .campaign-divider:before,
+html[data-campaign] .campaign-divider:after{
+ content:"";display:block;flex:1;height:1px;background:currentColor;opacity:.55
+}
+html[data-campaign] .campaign-subheading{
+ display:block;font-size:clamp(14px,1.25vw,19px);
+ line-height:1.8;max-width:425px;margin:0 0 24px;
+ color:var(--campaign-ink);opacity:.86
+}
+html[data-campaign] .hero.hero-campaign .hero-actions{
+ margin:0;display:flex;gap:12px;align-items:center;flex-wrap:wrap
+}
+html[data-campaign] .hero.hero-campaign .hero-actions .btn{
+ background:var(--campaign-button);color:#fff7ec;border-color:var(--campaign-button);
+ padding:11px 19px;min-height:45px;gap:12px;border-radius:7px;font-size:12px
+}
+html[data-campaign] .hero.hero-campaign .hero-actions .text-link{
+ border:1px solid var(--campaign-metal);background:#fff9efc7;
+ padding:12px 13px;font-size:12px;border-radius:7px;
+ text-decoration:none;color:#533d32;min-height:45px
+}
+html[data-campaign="ramadan"] .hero.hero-campaign .hero-actions .text-link{
+ background:#f6ead5;color:#18372f
+}
+html[data-campaign] .hero.hero-campaign .hero-copy::after{
+ content:var(--campaign-ornament);
+ position:absolute;left:6%;top:12%;font-size:76px;
+ color:var(--campaign-metal);opacity:.25;line-height:1;pointer-events:none
+}
+html[data-campaign] .campaign-visual-note{
+ display:block;position:absolute;left:9px;bottom:8px;z-index:1;
+ color:#f8ede4;font:600 9px var(--font-latin),sans-serif;
+ letter-spacing:.09em;text-shadow:0 1px 8px #332b2859
+}
+html[data-campaign] .campaign-season-credit{
+ display:flex;width:100%;font-size:11px;line-height:1.6;justify-content:center;
+ padding:7px 15px;background:var(--campaign-background);
+ border-bottom:1px solid var(--campaign-line);
+ color:#7f6b5b;order:0
+}
+/* The rest of the site is re-composed as the approved reference:
+   category photo strip directly after hero, then featured real products. */
+html[data-campaign] main>.real-categories{
+ padding-top:27px!important;padding-bottom:15px!important;max-width:1360px;
+ width:calc(100% - 48px)
+}
+html[data-campaign] main>.real-categories .section-header{
+ align-items:center;justify-content:center;text-align:center;display:block;margin-bottom:13px
+}
+html[data-campaign] main>.real-categories .section-header .eyebrow,
+html[data-campaign] main>.real-categories .section-header .section-lead{
+ display:none!important
+}
+html[data-campaign] #categoryTitle{
+ font-size:clamp(24px,2vw,33px);font-weight:800;
+ line-height:1.5;color:var(--campaign-button)
+}
+html[data-campaign] #categoryTitle::before,
+html[data-campaign] #categoryTitle::after{
+ content:var(--campaign-ornament);
+ font-size:19px;display:inline-block;margin-inline:15px;color:var(--campaign-metal);
+ vertical-align:middle
+}
+html[data-campaign] .real-categories .category-grid{
+ display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px
+}
+html[data-campaign] .real-categories .photo-category-tile{
+ height:124px;min-height:124px;border-radius:12px;
+ box-shadow:0 3px 14px #3d282015;border:1px solid #ffffffb5;
+ isolation:isolate
+}
+html[data-campaign] .real-categories .photo-category-tile img{
+ width:100%;height:100%;padding:0;
+ object-fit:cover!important;object-position:center 20%;
+ filter:saturate(.94);mix-blend-mode:normal;
+}
+html[data-campaign] .real-categories .category-content{
+ background:linear-gradient(to top,rgba(27,20,18,.92),rgba(33,24,19,.46) 43%,transparent 78%);
+ display:flex;flex-direction:row;align-items:flex-end;min-height:73px;
+ padding:10px 10px 11px;justify-content:center;text-align:center;
+ gap:0;color:white;inset-inline:0
+}
+html[data-campaign] .real-categories .category-content>span,
+html[data-campaign] .real-categories .category-content>i{display:none!important}
+html[data-campaign] .real-categories .category-content strong{
+ font-size:clamp(11px,.9vw,14px);line-height:1.45;
+ display:block;white-space:normal;color:white
+}
+html[data-campaign] .real-categories .additional-categories{
+ margin:14px 0 0;padding:9px 0 0;border-top:1px solid var(--campaign-line)
+}
+html[data-campaign] .real-categories .additional-categories-title{display:none}
+html[data-campaign] .real-categories .additional-categories-list{margin:4px 0 0;gap:6px}
+html[data-campaign] .real-categories .extra-category{padding:5px 9px;font-size:10px;background:transparent;border-radius:16px}
+html[data-campaign] .real-categories .extra-category span{font-size:10px}
+html[data-campaign] .real-categories .extra-category small{font-size:9px}
+html[data-campaign] .products-section{
+ background:var(--campaign-background);border:none;
+ padding-top:24px;padding-bottom:40px
+}
+html[data-campaign] .products-section>.container{max-width:1340px}
+html[data-campaign] .products-section .product-header{
+ margin-bottom:13px;padding-bottom:6px;border-bottom:1px solid var(--campaign-line)
+}
+html[data-campaign] .products-section .product-header .eyebrow{display:none}
+html[data-campaign] .products-section .product-header h2{
+ font-size:clamp(23px,2vw,32px);
+ color:var(--campaign-button)
+}
+html[data-campaign] .products-section .product-disclaimer{
+ font-size:10px;line-height:1.6;margin:4px 0
+}
+html[data-campaign] .products-section .shop-toolbar{margin:9px 0 14px}
+html[data-campaign] .products-section .filter-scroll{
+ gap:6px;padding:0 0 4px
+}
+html[data-campaign] .products-section .filter-pill{
+ font-size:10px;padding:6px 10px;min-height:30px;border-color:var(--campaign-line)
+}
+html[data-campaign] .campaign-products-layout{
+ display:grid;grid-template-columns:minmax(170px,19%) minmax(0,1fr);gap:22px;align-items:start
+}
+html:not([data-campaign]) .campaign-products-layout{display:contents}
+html[data-campaign] .campaign-editorial{
+ display:block;text-align:center;padding:20px 16px;
+ background:linear-gradient(180deg,transparent,#ffffff6e);
+ color:var(--campaign-button);min-height:310px;
+ border:1px solid var(--campaign-line);border-radius:12px;
+ position:sticky;top:18px
+}
+html[data-campaign] .campaign-editorial .campaign-editorial-icon{
+ font-size:44px;line-height:1.2;color:var(--campaign-metal);display:block
+}
+html[data-campaign] .campaign-editorial strong{
+ font-size:clamp(16px,1.5vw,23px);font-weight:800;
+ line-height:1.5;display:block;margin:12px auto
+}
+html[data-campaign] .campaign-editorial p{
+ font-size:12px;line-height:1.85;margin:0;color:#776a5e
+}
+html[data-campaign] .campaign-editorial small{
+ display:block;font:600 9px var(--font-latin),sans-serif;letter-spacing:.13em;
+ margin-bottom:9px;color:var(--campaign-metal)
+}
+html[data-campaign] .product-grid{
+ display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+ gap:24px 12px
+}
+html[data-campaign] .product-card{
+ min-width:0;background:#ffffffa8;border-radius:10px;
+ border:1px solid var(--campaign-line);padding:6px;overflow:hidden;
+ box-shadow:0 8px 24px #2b1e1709
+}
+html[data-campaign] .product-image-wrap{
+ border-radius:8px;overflow:hidden;height:auto;aspect-ratio:1.15;
+ background:#eee8df
+}
+html[data-campaign] .product-card.review-only .product-image-wrap>img{
+ padding:0!important;object-fit:contain!important;height:100%!important;
+ background:#ede7df
+}
+html[data-campaign] .product-card .product-meta{padding:9px 6px 5px;display:block}
+html[data-campaign] .product-card .product-name{
+ font-size:13px;line-height:1.5;margin-bottom:4px
+}
+html[data-campaign] .product-card .product-price{
+ text-align:initial!important;font-size:11px!important;line-height:1.7;
+ max-width:none!important;color:var(--campaign-button)
+}
+html[data-campaign] .product-card .quick-add{
+ position:static;display:block;opacity:1;transform:none;
+ font-size:10px;min-height:28px;padding:4px;
+ margin:5px auto 3px;background:var(--campaign-tint);
+ width:calc(100% - 8px);color:#796c63;border-radius:5px
+}
+html[data-campaign] .product-card .review-tag{
+ top:8px;right:8px;font-size:9px;padding:3px 6px
+}
+html[data-campaign] .product-card .favorite-btn{
+ width:30px;height:30px;font-size:16px;left:8px;top:8px
+}
+.campaign-benefits{display:none}
+html[data-campaign] main>.campaign-benefits{
+ display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+ gap:0;padding:14px 10px;margin-block:5px 38px;
+ border-radius:14px;border:1px solid var(--campaign-line);
+ background:#fffdf7b8;box-shadow:0 5px 25px #3a302019
+}
+html[data-campaign] .campaign-benefits>div{
+ display:flex;align-items:center;justify-content:center;gap:13px;
+ padding:6px 10px;border-inline-end:1px solid var(--campaign-line)
+}
+html[data-campaign] .campaign-benefits>div:last-child{border-inline-end:none}
+html[data-campaign] .campaign-benefits span{font-size:21px;color:var(--campaign-button)}
+html[data-campaign] .campaign-benefits p{font-size:12px;font-weight:700;margin:0;color:var(--campaign-ink);line-height:1.6}
+html[data-campaign] .campaign-benefits small{display:block;font-size:10px;color:#86756a;font-weight:400}
+html[data-campaign] .photo-gallery-section{border-top:1px solid var(--campaign-line);background:var(--campaign-background)}
+@keyframes kit-campaign-appear{from{opacity:.35;transform:scale(1.022)}to{opacity:1;transform:scale(1)}}
+@media(max-width:1150px){
+ html[data-campaign] .hero.hero-campaign{grid-template-columns:minmax(280px,41%) minmax(0,59%)}
+ html[data-campaign] .campaign-heading{font-size:clamp(35px,4.7vw,54px)}
+ html[data-campaign] .hero.hero-campaign .hero-copy{padding-inline:32px 18px}
+ html[data-campaign] .campaign-products-layout{grid-template-columns:160px minmax(0,1fr)}
+ html[data-campaign] .real-categories .category-grid{gap:7px}
+}
+@media(max-width:780px){
+ html[data-campaign] .hero.hero-campaign{
+   display:flex;flex-direction:column;min-height:0;height:auto;
+ }
+ html[data-campaign] .hero.hero-campaign .hero-visual{
+   width:100%;height:clamp(238px,54vw,395px);
+   flex:0 0 auto;order:0;max-width:none
+ }
+ html[data-campaign] .hero.hero-campaign .hero-copy{
+   order:1;padding:22px 6vw 28px;min-height:238px;text-align:center;align-items:center
+ }
+ html[data-campaign] .hero.hero-campaign .hero-copy>.eyebrow{margin-bottom:8px}
+ html[data-campaign] .campaign-heading{font-size:clamp(34px,7vw,56px)}
+ html[data-campaign] .campaign-subheading{margin:4px auto 15px;font-size:14px}
+ html[data-campaign] .campaign-divider{margin:5px auto 12px}
+ html[data-campaign] .hero.hero-campaign .hero-actions{justify-content:center}
+ html[data-campaign] .hero.hero-campaign .hero-copy::after{top:8%;left:7%;font-size:45px}
+ html[data-campaign] .campaign-hero-scene img{object-position:49% center}
+ html[data-campaign] main>.real-categories{width:calc(100% - 26px);padding-top:20px!important}
+ html[data-campaign] .real-categories .category-grid{
+   display:flex;overflow-x:auto;scroll-snap-type:x mandatory;
+   padding:3px 0 12px;gap:9px;scrollbar-width:thin
+ }
+ html[data-campaign] .real-categories .photo-category-tile{
+   flex:0 0 170px;height:116px;min-height:116px;scroll-snap-align:start
+ }
+ html[data-campaign] .real-categories .category-content strong{font-size:12px}
+ html[data-campaign] .campaign-products-layout{display:block}
+ html[data-campaign] .campaign-editorial{
+   position:relative;top:auto;min-height:0;
+   padding:13px;display:flex;gap:15px;align-items:center;text-align:right;
+   margin-bottom:16px
+ }
+ html[data-campaign] .campaign-editorial .campaign-editorial-icon{font-size:33px}
+ html[data-campaign] .campaign-editorial strong{font-size:17px;margin:0}
+ html[data-campaign] .campaign-editorial p{font-size:11px}
+ html[data-campaign] .campaign-editorial small{display:none}
+ html[data-campaign] .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ html[data-campaign] .campaign-benefits{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ html[data-campaign] .campaign-benefits>div{border:none;padding:5px}
+}
+@media(max-width:480px){
+ html[data-campaign] .hero.hero-campaign .hero-visual{height:clamp(212px,57vw,255px)}
+ html[data-campaign] .campaign-hero-scene img{object-position:48% center}
+ html[data-campaign] .hero.hero-campaign .hero-copy{min-height:0;padding:18px 18px 25px}
+ html[data-campaign] .campaign-heading{font-size:clamp(34px,9vw,43px);line-height:1.22}
+ html[data-campaign] .campaign-subheading{font-size:13px;max-width:310px}
+ html[data-campaign] .hero.hero-campaign .hero-actions{gap:7px}
+ html[data-campaign] .hero.hero-campaign .hero-actions .btn,
+ html[data-campaign] .hero.hero-campaign .hero-actions .text-link{
+   min-height:40px;padding:10px;font-size:11px;gap:6px
+ }
+ html[data-campaign] #categoryTitle{font-size:21px}
+ html[data-campaign] #categoryTitle::before,
+ html[data-campaign] #categoryTitle::after{margin-inline:7px;font-size:15px}
+ html[data-campaign] .products-section .product-header h2{font-size:22px}
+ html[data-campaign] .products-section>.container{padding-inline:12px}
+ html[data-campaign] .product-grid{gap:9px}
+ html[data-campaign] .product-card .product-name{font-size:12px}
+ html[data-campaign] .product-card .product-price{font-size:10px!important}
+ html[data-campaign] .campaign-benefits{margin-inline:12px}
+ html[data-campaign] .campaign-benefits p{font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){
+ html[data-campaign] .campaign-hero-scene img{animation:none!important}
+}
+
+/* Visual QA refinement: align the hero silhouette and spacing with approved reference. */
+html[data-campaign] .site-header{height:70px!important}
+html[data-campaign] .site-header .brand-seal{width:45px;height:45px;font-size:26px}
+html[data-campaign] .site-header .brand-type b{font-size:16px}
+html[data-campaign] .season-console-inner{
+ min-height:72px!important;padding-block:8px!important;gap:13px
+}
+html[data-campaign] .season-console-intro{flex-basis:186px}
+html[data-campaign] .season-console-symbol{width:36px;height:36px;font-size:19px}
+html[data-campaign] .season-console-options{padding-bottom:4px;gap:7px}
+html[data-campaign] .season-chip{min-height:39px;padding:7px 10px;border-radius:6px}
+html[data-campaign] .season-chip-text{font-size:11px}
+html[data-campaign] .campaign-heading span:empty{display:none!important}
+html[data-campaign] .campaign-heading{
+ font-size:clamp(36px,3.65vw,54px);
+ line-height:1.23;letter-spacing:-.045em
+}
+html[data-campaign] .campaign-subheading{font-size:clamp(13px,1.11vw,16px);margin-bottom:18px;line-height:1.78}
+html[data-campaign] .hero.hero-campaign .hero-copy>.eyebrow{margin-bottom:9px}
+html[data-campaign] .campaign-divider{margin:4px 0 10px}
+html[data-campaign] .hero.hero-campaign .hero-actions .btn,
+html[data-campaign] .hero.hero-campaign .hero-actions .text-link{
+ min-height:42px;padding:10px 14px;
+}
+html[data-campaign] .real-categories .category-content{
+ background:linear-gradient(0deg,rgba(30,22,20,.96) 0%,rgba(30,22,20,.7) 42%,rgba(30,22,20,.13) 90%)
+}
+html[data-campaign] .real-categories .photo-category-tile img{object-position:center 35%}
+@media(min-width:781px){
+ html[data-campaign] .hero.hero-campaign{
+   height:clamp(325px,25.5vw,380px);
+   grid-template-columns:minmax(345px,40%) minmax(0,60%)
+ }
+ html[data-campaign] .hero.hero-campaign .hero-copy{padding-inline:4vw 16px}
+}
+@media(max-width:780px){
+ html[data-campaign] .site-header{height:68px!important}
+ html[data-campaign] .season-console-inner{min-height:68px!important;padding-block:9px!important}
+ html[data-campaign] .hero.hero-campaign{height:auto;display:flex}
+ html[data-campaign] .campaign-heading{font-size:clamp(33px,6.9vw,51px);line-height:1.22}
+ html[data-campaign] .campaign-divider{margin:8px auto}
+}
+@media(max-width:480px){
+ html[data-campaign] .season-console-intro{flex-basis:116px}
+ html[data-campaign] .season-console-symbol{width:27px;height:27px;font-size:16px}
+ html[data-campaign] .season-console-kicker{font-size:7px}
+ html[data-campaign] .season-console-intro strong{font-size:10px}
+ html[data-campaign] .campaign-heading{font-size:clamp(34px,9vw,42px)}
+ html[data-campaign] .campaign-subheading{margin-bottom:15px;font-size:12px}
+}

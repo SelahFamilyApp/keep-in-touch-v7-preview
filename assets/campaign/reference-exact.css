@@ -1,0 +1,362 @@
+/* Keep in Touch / Reference Exact Edition
+   Every campaign illustration in this stylesheet is a pixel crop of the four
+   already approved references. No additional image was generated.
+   Desktop signature heroes: one continuous approved composition, not a split panel.
+   Real product photos, category filtering and staff workflows remain functional. */
+.reference-exact-hero,.reference-editorial-image{display:none}
+.reference-hero-accessible{
+ border:0;clip:rect(0,0,0,0);clip-path:inset(50%);height:1px;
+ margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap
+}
+html[data-reference-exact] .site-header{
+ height:76px!important;background:rgba(255,252,249,.98)!important;
+}
+html[data-reference-exact] .season-console{
+ background:var(--paper)!important;
+ border-bottom:1px solid #dbcfc4
+}
+html[data-reference-exact] .season-console-inner{
+ min-height:66px!important;padding-block:9px!important;gap:14px
+}
+html[data-reference-exact] .season-console-options{gap:10px;padding:0 0 1px}
+html[data-reference-exact] .season-chip{
+ min-height:41px;padding:7px 13px;
+ border-radius:8px;background:#fbf5f0;box-shadow:0 1px 2px #5b423510;
+}
+html[data-reference-exact] .season-chip.selected{
+ background:var(--campaign-button)!important;color:#fff!important;
+}
+html[data-reference-exact] .season-chip.selected span{color:#fff!important}
+html[data-reference-exact] body{background:#f8f3ef}
+html[data-reference-exact] .campaign-season-credit{display:none!important}
+html[data-reference-exact] .hero.hero-campaign{
+ display:block;position:relative;max-width:none;width:100%;
+ height:auto!important;min-height:0!important;padding:0!important;
+ overflow:hidden;background:#f8f2eb;margin:0;line-height:0;isolation:isolate;
+}
+html[data-reference-exact] .hero.hero-campaign .hero-copy,
+html[data-reference-exact] .hero.hero-campaign .hero-visual{
+ display:none!important
+}
+html[data-reference-exact] .reference-exact-hero{
+ display:block;position:relative;width:100%;height:auto;
+}
+html[data-reference-exact] .reference-exact-artwork{
+ width:100%;height:auto;display:block;max-width:none;
+ object-fit:contain;object-position:center;filter:none;mix-blend-mode:normal;
+}
+html[data-reference-exact] .reference-hotspot{
+ position:absolute;z-index:5;display:block;
+ top:var(--ref-button-top,73.5%);
+ height:var(--ref-button-height,16%);
+ border:1px solid transparent;border-radius:8px;
+ opacity:0;color:transparent;
+ transition:opacity .18s,background .18s;
+ cursor:pointer;
+}
+html[data-reference-exact] .reference-hotspot:hover{
+ opacity:.15;background:#fff
+}
+html[data-reference-exact] .reference-hotspot:focus-visible{
+ opacity:1;outline:3px solid #ecb35e;outline-offset:3px;background:#ffffff24
+}
+html[data-reference-exact] .reference-hotspot-shop{
+ left:var(--ref-primary-left,77.5%);
+ width:var(--ref-primary-width,15.7%);
+}
+html[data-reference-exact] .reference-hotspot-occasions{
+ left:var(--ref-secondary-left,63.7%);
+ width:var(--ref-secondary-width,13.6%);
+}
+/* Entire six-card strip uses EXACT pixel crops from the approved mockups.
+   The cards are interactive category links, not screenshots of the entire site. */
+html[data-reference-exact] main>.real-categories{
+ order:1;width:calc(100% - 12.15%);
+ max-width:1280px;margin:0 auto;
+ padding:7px 0 9px!important;min-height:0;
+}
+html[data-reference-exact] .real-categories .section-header{
+ display:block;text-align:center;margin:0 0 8px!important;
+}
+html[data-reference-exact] .real-categories .section-header h2{
+ font-size:25px!important;line-height:1.35;font-weight:800;margin:0!important;
+ color:#352f2c!important;letter-spacing:-.04em
+}
+html[data-reference-exact] .real-categories .section-header h2 em{font-style:normal;color:inherit!important}
+html[data-reference-exact] .real-categories .section-header h2:before,
+html[data-reference-exact] .real-categories .section-header h2:after{
+ content:var(--campaign-ornament);font-size:19px;opacity:.7;vertical-align:middle;
+ margin-inline:15px;color:var(--campaign-button)
+}
+html[data-reference-exact] .real-categories .section-header .eyebrow,
+html[data-reference-exact] .real-categories .section-header .section-lead{display:none!important}
+html[data-reference-exact] .real-categories .category-grid{
+ display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr));
+ gap:9px!important;padding:0!important;overflow:visible!important
+}
+html[data-reference-exact] .real-categories .photo-category-tile{
+ position:relative;display:block;min-width:0;
+ height:auto!important;min-height:0!important;aspect-ratio:201/111;
+ border:1px solid #ffffffac;border-radius:11px;
+ overflow:hidden;box-shadow:none!important;padding:0!important;
+ background:#eee6de;isolation:isolate;
+ transform:none!important;
+}
+html[data-reference-exact] .real-categories .photo-category-tile img{
+ position:absolute;inset:0;width:100%;height:100%;
+ object-fit:fill!important;object-position:center!important;
+ padding:0!important;border:0!important;
+ filter:none!important;transform:none!important;
+ mix-blend-mode:normal!important;
+}
+html[data-reference-exact] .real-categories .photo-category-tile .category-content{
+ display:none!important
+}
+html[data-reference-exact] .real-categories .photo-category-tile:hover{
+ box-shadow:0 7px 17px #5942352d!important;transform:translateY(-2px)!important
+}
+html[data-reference-exact] .real-categories .additional-categories{display:none!important}
+/* Showcase cards: four genuine products, matching the reference layout.
+   Full 42-family catalog expands using the real "عرض الكل" link. */
+html[data-reference-exact] .products-section{
+ order:2;padding:0 0 11px!important;border:0!important;
+ background:#f8f4f0!important;min-height:0
+}
+html[data-reference-exact] .products-section>.container{
+ display:flex;flex-direction:column;
+ width:calc(100% - 12.15%);max-width:1280px;padding:0;
+}
+html[data-reference-exact] .products-section .product-header{
+ order:1;margin:0 0 10px!important;padding:0 0 5px!important;
+ border-bottom:1px solid #cbbdb2;align-items:center;display:flex;
+}
+html[data-reference-exact] .products-section .product-header h2{
+ font-size:19px!important;line-height:1.3;font-weight:800;
+ margin:0!important;color:#7d303e
+}
+html[data-reference-exact="ramadan"] .products-section .product-header h2{color:#86592e}
+html[data-reference-exact="sham-nessim"] .products-section .product-header h2{color:#725436}
+html[data-reference-exact] .products-section .product-header h2 em{font-style:normal}
+html[data-reference-exact] .products-section .product-header .eyebrow,
+html[data-reference-exact] .products-section .product-header .product-disclaimer{
+ display:none!important
+}
+html[data-reference-exact] .products-section .underlined-action{
+ border:0;border-bottom:1px solid #815f59;
+ font-size:11px!important;line-height:1.7;font-weight:650;
+ gap:7px;padding:0 0 1px;direction:ltr
+}
+html[data-reference-exact] .campaign-products-layout{
+ order:2;display:grid!important;
+ grid-template-columns:285px minmax(0,1fr)!important;
+ gap:18px!important;align-items:start
+}
+html[data-reference-exact] .campaign-editorial{
+ padding:0!important;position:relative!important;top:auto;
+ width:100%;height:218px;min-height:0!important;
+ background:transparent!important;box-shadow:none!important;
+ border:0!important;border-radius:0!important;
+ overflow:hidden;text-align:center
+}
+html[data-reference-exact] .campaign-editorial .reference-editorial-image{
+ display:block;width:100%;height:100%;object-fit:contain;
+ object-position:center;background:transparent
+}
+html[data-reference-exact] .campaign-editorial>:not(.reference-editorial-image){display:none!important}
+html[data-reference-exact] .product-grid{
+ display:grid!important;
+ grid-template-columns:repeat(4,minmax(0,1fr))!important;
+ gap:14px!important;align-items:start
+}
+html[data-reference-exact]:not(.catalog-expanded) .product-grid>.product-card:nth-child(n+5){display:none!important}
+html[data-reference-exact] .product-card{
+ padding:0 0 4px!important;min-width:0;
+ background:#f9f5f1!important;
+ border:1px solid #e4d9d1;border-radius:11px;
+ box-shadow:none!important
+}
+html[data-reference-exact] .product-card .product-image-wrap{
+ height:auto;aspect-ratio:226/145;overflow:hidden;border-radius:9px 9px 0 0;
+ background:#ebe2d9
+}
+html[data-reference-exact] .product-card.review-only .product-image-wrap>img{
+ padding:0!important;object-fit:contain!important;
+ object-position:center;background:#ece5dd
+}
+html[data-reference-exact] .product-card .product-tag{
+ top:7px;right:6px;padding:2px 5px;font-size:9px
+}
+html[data-reference-exact] .product-card .favorite-btn{
+ right:auto;left:8px;top:8px;width:29px;height:29px;
+ background:#fffdf0db;border:1px solid #e8d9cd;
+}
+html[data-reference-exact] .product-card .product-meta{
+ padding:6px 10px 2px;display:block
+}
+html[data-reference-exact] .product-card .product-meta small{
+ font-size:9px;color:#8d7c71;line-height:1.1;margin:0
+}
+html[data-reference-exact] .product-card .product-name{
+ font-size:12px;font-weight:800;line-height:1.45;
+ white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+ margin:1px 0
+}
+html[data-reference-exact] .product-card .product-price{
+ font-size:10px!important;line-height:1.55;
+ color:#674b45;text-align:right!important;
+}
+html[data-reference-exact] .product-card .quick-add{display:none!important}
+/* Browse all exposes category filters and 42 families, while default view
+   is visually faithful to the approved four-product editorial composition. */
+html[data-reference-exact] .products-section .shop-toolbar{
+ order:3;margin:0;padding:0;display:none
+}
+html[data-reference-exact].catalog-expanded .products-section .shop-toolbar{
+ display:flex!important;margin-top:12px;
+ padding-top:10px;border-top:1px solid var(--campaign-line)
+}
+html[data-reference-exact] .products-section .empty-state{order:4}
+html[data-reference-exact] .campaign-benefits{
+ order:3;display:grid;
+ grid-template-columns:repeat(4,minmax(0,1fr));
+ width:calc(100% - 15%);max-width:1220px;
+ margin:11px auto 22px!important;padding:9px 8px!important;
+ border:1px solid #e7d9ce;background:#f7f0eabf;
+ border-radius:11px;box-shadow:none;gap:0
+}
+html[data-reference-exact] .campaign-benefits>div{
+ display:flex;gap:11px;align-items:center;justify-content:center;
+ padding:3px 8px;border-inline-end:1px solid #d7c2b2
+}
+html[data-reference-exact] .campaign-benefits p{font-size:12px}
+html[data-reference-exact] .campaign-benefits small{font-size:9px}
+/* Preserve responsiveness by exposing real live HTML below tablet sizes;
+   the "baked" reference heading is never squeezed into an unreadable image. */
+@media(max-width:1059px){
+ html[data-reference-exact] .reference-exact-hero{display:none!important}
+ html[data-reference-exact] .hero.hero-campaign{
+   display:flex!important;flex-direction:column!important;
+   height:auto!important;min-height:0!important
+ }
+ html[data-reference-exact] .hero.hero-campaign .hero-visual{
+   display:block!important;order:0;height:clamp(210px,45vw,420px)!important;
+   width:100%
+ }
+ html[data-reference-exact] .hero.hero-campaign .hero-copy{
+   display:flex!important;order:1;height:auto;
+   background:var(--campaign-surface);padding:20px 22px 26px
+ }
+ html[data-reference-exact] .real-categories .category-grid{
+   display:flex!important;overflow-x:auto!important;
+   scroll-snap-type:x mandatory;padding:4px 0 8px!important;
+   gap:9px!important
+ }
+ html[data-reference-exact] .real-categories .photo-category-tile{
+   flex:0 0 178px!important;aspect-ratio:201/111!important;
+   scroll-snap-align:start
+ }
+ html[data-reference-exact] .campaign-products-layout{
+   grid-template-columns:190px minmax(0,1fr)!important;gap:12px!important
+ }
+ html[data-reference-exact] .product-grid{
+   grid-template-columns:repeat(2,minmax(0,1fr))!important
+ }
+ html[data-reference-exact] .campaign-editorial{
+   height:auto!important;min-height:205px!important
+ }
+}
+@media(max-width:780px){
+ html[data-reference-exact] .products-section>.container,
+ html[data-reference-exact] main>.real-categories{
+   width:calc(100% - 26px);max-width:none
+ }
+ html[data-reference-exact] .campaign-products-layout{display:flex!important;flex-direction:column}
+ html[data-reference-exact] .campaign-editorial{
+   order:0;display:none!important;
+ }
+ html[data-reference-exact] .product-grid{
+   order:1;width:100%;
+   grid-template-columns:repeat(2,minmax(0,1fr))!important;
+   gap:12px!important
+ }
+ html[data-reference-exact] .campaign-benefits{
+   width:calc(100% - 26px);
+   grid-template-columns:repeat(2,minmax(0,1fr))!important;
+ }
+ html[data-reference-exact] .real-categories .section-header h2{font-size:22px!important}
+}
+@media(max-width:480px){
+ html[data-reference-exact] .site-header{height:66px!important}
+ html[data-reference-exact] .season-console-inner{min-height:75px!important}
+ html[data-reference-exact] .hero.hero-campaign .hero-visual{
+   height:clamp(208px,58vw,262px)!important
+ }
+ html[data-reference-exact] .hero.hero-campaign .hero-copy{padding:20px 18px 23px}
+ html[data-reference-exact] .campaign-heading{font-size:clamp(33px,9vw,42px)}
+ html[data-reference-exact] .real-categories .section-header h2{font-size:20px!important}
+ html[data-reference-exact] .real-categories .photo-category-tile{flex:0 0 162px!important}
+ html[data-reference-exact] .product-card .product-price{font-size:10px!important}
+ html[data-reference-exact] .products-section .product-header h2{font-size:18px!important}
+ html[data-reference-exact] .campaign-benefits>div{padding:4px}
+}
+@media(prefers-reduced-motion:reduce){
+ html[data-reference-exact] .reference-exact-artwork{animation:none!important}
+}
+/* Calibrated against reference artwork at 1448px: after excluding the
+   38px mock-browser chrome, match hero Y175, category card Y560,
+   four-product row Y718, and feature strip Y937. */
+@media(min-width:1060px){
+ html[data-reference-exact] .season-console-inner{
+   min-height:66px!important;
+   padding-block:5px!important;
+ }
+ html[data-reference-exact] main>.real-categories{
+   padding:15px 0 5px!important;
+ }
+ html[data-reference-exact] .real-categories .section-header{
+   margin:0 0 15px!important;
+ }
+ html[data-reference-exact] .product-card .product-meta small{
+   display:none!important;
+ }
+ html[data-reference-exact] .product-card .product-price{
+   padding:0!important;margin:0!important;min-height:0!important;
+ }
+ html[data-reference-exact] .campaign-benefits{margin-top:10px!important}
+}
+
+/* The approved reference ends its 4-card row near Y912 (excluding fake
+   browser chrome); prevent the editorial image from forcing a taller row. */
+@media(min-width:1060px){
+ html[data-reference-exact] .campaign-editorial{
+   height:196px!important;min-height:0!important;
+ }
+}
+
+/* Ramadan mobile: preserve dark emerald artwork and readable ivory copy.
+   Never place the pale Ramadan title on a light cream background. */
+@media(max-width:1059px){
+ html[data-reference-exact="ramadan"] .hero.hero-campaign .hero-copy{
+   background:radial-gradient(ellipse at 25% 15%,#164e42 0%,#082f2b 73%,#052b27 100%)!important;
+   color:#f5e6c8!important;
+ }
+ html[data-reference-exact="ramadan"] .hero.hero-campaign .campaign-heading,
+ html[data-reference-exact="ramadan"] .hero.hero-campaign .campaign-subheading,
+ html[data-reference-exact="ramadan"] .hero.hero-campaign .eyebrow{
+   color:#f5e6c8!important;
+ }
+}
+html[data-reference-exact] .campaign-visual-note{display:none!important}
+
+html[data-reference-exact] .demo-corner{display:none!important}
+
+/* The real catalog stays non-purchasable; after expanding the catalog,
+   restore the original nine demo-only cart buttons for staff walkthroughs. */
+html[data-reference-exact].catalog-expanded .product-card.demo-only .quick-add{
+ display:block!important;position:static!important;opacity:1!important;
+ transform:none!important;margin:5px 8px 3px!important;
+ width:calc(100% - 16px)!important;
+ background:var(--campaign-button)!important;color:#fff!important;
+ border:0!important;border-radius:6px!important;min-height:34px!important;
+ font-size:11px!important;
+}

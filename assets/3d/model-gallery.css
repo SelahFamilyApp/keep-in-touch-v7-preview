@@ -1,0 +1,84 @@
+/* Keep in Touch · 3D GLB/ZIP local gallery. Scoped: approved V7 seasonal designs unaffected. */
+.kit3d-jump{display:inline-flex;align-items:center;gap:7px;padding:9px 14px;border:1px solid #b39183;border-radius:22px;background:#fff9f4;color:#815360;font-size:12px;font-weight:800;text-decoration:none;white-space:nowrap;transition:background .2s}
+.kit3d-jump:hover{background:#f7e8e2;color:#6d3749}
+.kit3d{background:linear-gradient(132deg,#f8f0e9 0%,#fffdf9 58%,#f3e5e3 100%);border-block:1px solid #dbc7bb;padding:65px 0 80px;direction:rtl}
+.kit3d .container{max-width:1280px}
+.kit3d-head{text-align:center;max-width:800px;margin:0 auto 25px}
+.kit3d-kicker{font:700 11px/1.5 Arial,sans-serif;letter-spacing:.19em;color:#a27e66}
+.kit3d-head h2{font:800 clamp(24px,3vw,38px)/1.4 'Tajawal',Tahoma,sans-serif;color:#463239;margin:10px auto 10px}
+.kit3d-head h2 em{font-style:normal;color:#a36c7b}
+.kit3d-head p{font-size:14px;color:#73645e;line-height:1.85;margin:0}
+.kit3d-import{display:flex;align-items:center;justify-content:space-between;gap:20px;background:#fffaf5;border:1px solid #dfcabc;border-radius:16px;padding:16px 22px;margin-bottom:18px;box-shadow:0 7px 20px #5f403012}
+.kit3d-import div{min-width:0}
+.kit3d-import strong{display:block;color:#4c383a;font-size:15px;margin-bottom:6px}
+.kit3d-import small{display:block;font-size:11px;color:#89766b;line-height:1.6}
+.kit3d-input{width:min(100%,390px);flex:1 1 340px;min-height:52px;border:2px dashed #c8a99e;border-radius:11px;background:#fffdfb;color:#715952;font:600 12px/1.5 Tahoma,sans-serif;padding:8px;box-sizing:border-box;cursor:pointer}
+.kit3d-input::file-selector-button{border:0;background:#60434d;border-radius:8px;color:#fff;padding:11px 14px;margin-inline-end:10px;font:700 12px/1.3 Tahoma,sans-serif;cursor:pointer}
+.kit3d-input:focus-visible{outline:3px solid #ac7d8c;outline-offset:3px}
+.kit3d-layout{display:grid;grid-template-columns:minmax(275px,.71fr) minmax(0,1.29fr);gap:19px;align-items:stretch}
+.kit3d-choices,.kit3d-preview{min-width:0;background:#fffdfa;border:1px solid #e0d0c4;border-radius:18px;box-shadow:0 11px 30px #6b514214;overflow:hidden}
+.kit3d-choices{padding:20px}
+.kit3d-choices-title{display:flex;align-items:center;justify-content:space-between;gap:10px;border-bottom:1px solid #e6d7ce;padding-bottom:13px}
+.kit3d-choices-title strong{font-size:15px;color:#4d383b}
+.kit3d-choices-title span{font-size:11px;color:#8d776d}
+.kit3d-list{display:flex;flex-direction:column;gap:9px;max-height:475px;overflow-y:auto;padding:14px 2px 8px;scrollbar-width:thin}
+.kit3d-model{width:100%;background:#fffaf7;border:1px solid #e8d9d0;color:#4a3b38;border-radius:11px;cursor:pointer;display:grid;grid-template-columns:40px minmax(0,1fr) 22px;align-items:center;gap:2px 10px;text-align:right;padding:12px 11px;font-family:inherit;transition:background .2s,border-color .2s}
+.kit3d-model:hover{background:#f8ece7;border-color:#bd988c}
+.kit3d-model[aria-pressed=true]{background:#f5e7e6;border-color:#8d5a69;box-shadow:inset 3px 0 #9b6172}
+.kit3d-model:focus-visible{outline:2px solid #7d4b5c;outline-offset:3px}
+.kit3d-model-number{grid-row:span 2;display:grid;place-items:center;width:35px;height:35px;border-radius:9px;background:#f0e1d9;color:#805666;font:700 12px/1 Arial,sans-serif}
+.kit3d-model-title{min-width:0;font:700 12px/1.5 Tahoma,sans-serif;overflow-wrap:anywhere}
+.kit3d-model small{grid-column:2;color:#937a70;font:500 10px/1.3 Arial,sans-serif}
+.kit3d-model-chevron{grid-column:3;grid-row:1 / span 2;font-size:21px;color:#9b6c7a}
+.kit3d-empty-list{padding:45px 14px;text-align:center;font-size:13px;line-height:1.7;color:#8b776b}
+.kit3d-empty-list[hidden]{display:none}
+.kit3d-clear{border:1px solid #c5afa2;border-radius:9px;background:#fffaf6;color:#735454;font:700 11px/1.3 Tahoma,sans-serif;padding:9px 16px;cursor:pointer;margin-top:9px}
+.kit3d-clear:hover{background:#f5e9e2}
+.kit3d-preview{display:flex;flex-direction:column;padding:12px}
+.kit3d-stage{position:relative;min-height:435px;height:min(44vw,500px);background:radial-gradient(ellipse at 50% 38%,#fffefa 0%,#f1e6de 72%,#e0ccc1 100%);border:1px solid #e3d4ca;border-radius:13px;overflow:hidden;isolation:isolate}
+.kit3d-stage:after{content:"";position:absolute;bottom:4%;left:10%;right:10%;height:12%;background:radial-gradient(ellipse,#49353322,transparent 70%);pointer-events:none}
+.kit3d-canvas{position:absolute;inset:0;display:block;width:100%;height:100%;touch-action:none;cursor:grab;z-index:1}
+.kit3d-canvas:active{cursor:grabbing}
+.kit3d-canvas[hidden]{display:none}
+.kit3d-stage-empty{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:25px;color:#8a7068;z-index:2}
+.kit3d-stage-empty[hidden]{display:none}
+.kit3d-stage-empty .kit3d-cube{display:grid;place-items:center;width:90px;height:90px;border-radius:24px;border:1px solid #ceb8ae;background:#ffffff88;color:#865d67;font-size:62px;font-weight:300}
+.kit3d-stage-empty strong{font-size:16px;color:#5c4346}
+.kit3d-stage-empty small{font-size:12px;line-height:1.6}
+.kit3d-stage-busy{position:absolute;inset:0;background:#fffcf2b8;z-index:4;display:grid;place-items:center;color:#70555c;font-size:14px;font-weight:700;backdrop-filter:blur(3px)}
+.kit3d-stage-busy[hidden]{display:none}
+.kit3d-badge{position:absolute;right:14px;top:12px;z-index:3;background:#fffcf4e8;border:1px solid #e4d5c7;border-radius:20px;font:700 10px/1.5 Arial,sans-serif;letter-spacing:.08em;color:#855a65;padding:7px 10px;pointer-events:none}
+.kit3d-viewer-title{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:12px 7px 5px}
+.kit3d-viewer-title strong{font-size:12px;font-weight:750;color:#5d4445;overflow-wrap:anywhere}
+.kit3d-viewer-title small{color:#89756d;font-size:10px}
+.kit3d-tools{display:flex;flex-wrap:wrap;align-items:center;gap:6px;padding:8px 5px}
+.kit3d-tools button{border:1px solid #d2bfb4;border-radius:8px;cursor:pointer;background:#fffaf5;color:#674953;min-width:42px;min-height:38px;padding:7px 9px;font-size:15px;font-family:inherit;transition:background .15s}
+.kit3d-tools button:hover{background:#f0e3e0}
+.kit3d-tools button:focus-visible{outline:2px solid #865362;outline-offset:2px}
+.kit3d-tools button[aria-pressed=true]{background:#744b5a;color:white}
+.kit3d-status{display:block;font-size:12px;line-height:1.65;color:#74645d;min-height:22px;padding:5px 7px 2px;overflow-wrap:anywhere}
+.kit3d-status[data-kind=error]{color:#a53341}
+.kit3d-status[data-kind=success]{color:#39704f}
+.kit3d-footnote{font-size:11px;line-height:1.8;margin-top:15px;color:#7f6f66}
+.kit3d-footnote strong{color:#755458}
+@media(max-width:850px){
+.kit3d{padding:40px 0 54px}
+.kit3d-import{flex-direction:column;align-items:stretch;gap:11px}
+.kit3d-input{width:100%;flex:auto}
+.kit3d-layout{display:flex;flex-direction:column}
+.kit3d-preview{order:1}
+.kit3d-choices{order:2}
+.kit3d-stage{min-height:350px;height:min(68vw,450px)}
+.kit3d-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-height:unset}
+}
+@media(max-width:480px){
+.kit3d>.container{width:calc(100% - 26px)}
+.kit3d-head h2{font-size:25px}
+.kit3d-head p{font-size:12px}
+.kit3d-import,.kit3d-choices{padding:14px}
+.kit3d-stage{height:330px;min-height:330px}
+.kit3d-list{grid-template-columns:1fr}
+.kit3d-tools button{min-width:38px;font-size:13px}
+.kit3d-jump{white-space:normal;font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){.kit3d-model,.kit3d-tools button{transition:none}}
